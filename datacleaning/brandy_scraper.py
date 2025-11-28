@@ -53,6 +53,7 @@ smalltops = """
             or type LIKE '%Shirts%'
             """
 smalltops_result = sqldf(smalltops, locals())
+smalltops_result.to_csv('data-viz/brandy_smalltops.csv', index = False)
 
 bigtops = """
         SELECT name, type, price
@@ -63,6 +64,7 @@ bigtops = """
             or type LIKE '%Long Sleeve%'
         """
 bigtops_result = sqldf(bigtops, locals())
+bigtops_result.to_csv('data-viz/brandy_bigtops.csv', index = False)
 
 bigbottoms = """
             SELECT name, type, price
@@ -72,6 +74,7 @@ bigbottoms = """
             or type LIKE '%Jeans%'
             """
 bigbottoms_result = sqldf(bigbottoms, locals())
+bigbottoms_result.to_csv('data-viz/brandy_bigbottoms.csv', index = False)
 
 smallbottoms = """
             SELECT name, type, price
@@ -80,5 +83,5 @@ smallbottoms = """
             or type LIKE '%Shorts%'
             """
 smallbottoms_result = sqldf(smallbottoms, locals())
+smallbottoms_result.to_csv('data-viz/brandy_smallbottoms.csv', index = False)
 
-#print(smallbottoms_result)
